@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Construction, ChevronDown, Sparkles, Eye, Brain, Cpu, Zap } from "lucide-react"
+import { Construction, ChevronDown } from "lucide-react"
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -15,53 +15,18 @@ export function HeroSection() {
       {/* Animated Grid Background */}
       <div className="absolute inset-0 grid-bg opacity-50" />
 
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[1200px] md:w-[1000px] md:h-[1400px]">
-        <div className="absolute inset-0 bg-gradient-to-b from-neon/25 via-neon/15 to-neon/5 rounded-full blur-3xl animate-neon-pulse" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[600px] md:max-w-[800px] md:h-[800px]">
+        <div className="absolute inset-0 bg-gradient-to-b from-neon/20 via-neon/10 to-transparent rounded-full blur-3xl animate-neon-pulse" />
         <div
-          className="absolute inset-10 bg-gradient-to-b from-neon/20 via-neon/10 to-transparent rounded-full animate-neon-pulse"
-          style={{ animationDelay: "1s" }}
+          className="absolute inset-20 bg-gradient-to-b from-neon/15 to-transparent rounded-full animate-neon-pulse"
+          style={{ animationDelay: "1.5s" }}
         />
-        <div
-          className="absolute inset-32 bg-gradient-to-b from-neon/15 to-transparent rounded-full animate-neon-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-      </div>
-
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-t from-neon/10 via-neon/5 to-transparent blur-2xl pointer-events-none" />
-
-      <div className="absolute top-20 left-10 md:left-20 animate-float" style={{ animationDelay: "0s" }}>
-        <Eye className="w-6 h-6 md:w-8 md:h-8 text-neon/30" />
-      </div>
-      <div className="absolute top-40 right-10 md:right-32 animate-float" style={{ animationDelay: "2s" }}>
-        <Brain className="w-8 h-8 md:w-10 md:h-10 text-neon/20" />
-      </div>
-      <div className="absolute bottom-40 left-20 md:left-40 animate-float" style={{ animationDelay: "1s" }}>
-        <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-neon/25" />
-      </div>
-      <div className="absolute top-1/3 right-10 md:right-20 animate-float" style={{ animationDelay: "1.5s" }}>
-        <Cpu className="w-6 h-6 md:w-8 md:h-8 text-neon/20" />
-      </div>
-      <div className="absolute bottom-1/3 right-1/4 animate-float" style={{ animationDelay: "0.5s" }}>
-        <Zap className="w-5 h-5 md:w-7 md:h-7 text-neon/15" />
-      </div>
-
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-neon/30 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
-            }}
-          />
-        ))}
       </div>
 
       {/* Content */}
-      <div className={`relative z-10 text-center max-w-5xl mx-auto ${mounted ? "animate-fade-in-up" : "opacity-0"}`}>
+      <div
+        className={`relative z-10 text-center w-full max-w-5xl mx-auto ${mounted ? "animate-fade-in-up" : "opacity-0"}`}
+      >
         {/* Under Construction Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-neon/30 bg-neon/5 backdrop-blur-sm">
           <Construction className="w-4 h-4 text-neon animate-pulse" />
