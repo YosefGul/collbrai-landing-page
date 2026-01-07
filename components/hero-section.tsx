@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Construction, ChevronDown } from "lucide-react"
+import { Construction, ChevronDown, Eye, Brain, Sparkles, Cpu, Zap } from "lucide-react"
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -15,10 +15,34 @@ export function HeroSection() {
       {/* Animated Grid Background */}
       <div className="absolute inset-0 grid-bg opacity-50" />
 
+      {/* Neon Glow Effect */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[600px] md:max-w-[800px] md:h-[800px]">
         <div className="absolute inset-0 bg-gradient-to-b from-neon/20 via-neon/10 to-transparent rounded-full blur-3xl animate-neon-pulse" />
         <div
           className="absolute inset-20 bg-gradient-to-b from-neon/15 to-transparent rounded-full animate-neon-pulse"
+          style={{ animationDelay: "1.5s" }}
+        />
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
+        <Eye
+          className="absolute top-[20%] left-[10%] w-6 h-6 text-neon/30 animate-float"
+          style={{ animationDelay: "0s" }}
+        />
+        <Brain
+          className="absolute top-[15%] right-[10%] w-8 h-8 text-neon/25 animate-float"
+          style={{ animationDelay: "1s" }}
+        />
+        <Sparkles
+          className="absolute top-[60%] left-[8%] w-5 h-5 text-neon/35 animate-float"
+          style={{ animationDelay: "2s" }}
+        />
+        <Cpu
+          className="absolute top-[50%] right-[8%] w-7 h-7 text-neon/30 animate-float"
+          style={{ animationDelay: "0.5s" }}
+        />
+        <Zap
+          className="absolute top-[75%] right-[15%] w-5 h-5 text-neon/25 animate-float"
           style={{ animationDelay: "1.5s" }}
         />
       </div>
